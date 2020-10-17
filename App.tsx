@@ -1,15 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
+
+const App = () => {
+
+const [] = useState(0);
+  const [count, setCount] = useState(0);
+
+return (
+
+
+
+<View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>{count}</Text>
+      <Button title="increment" onPress={() => setCount(count +1)} />
+
+
+
+
     </View>
-  );
+
+
+
+
+)
+
+
 }
+
+export default App
+
 
 const styles = StyleSheet.create({
   container: {
